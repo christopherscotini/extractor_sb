@@ -1,11 +1,11 @@
-package com.gamaset.extractor.exceltosql.dto;
+package com.gamaset.extractor.entity;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class FlagDTO {
+public class Flag {
 	
 	public static final int ID_COLUMN = 0;
 	public static final int NAME_COLUMN = 1;
@@ -15,9 +15,9 @@ public class FlagDTO {
 	private String name;
 	private String url;
 
-	public FlagDTO() {	}
+	public Flag() {	}
 
-	public FlagDTO(Long id, String name, String url) {
+	public Flag(Long id, String name, String url) {
 		super();
 		this.id = id;
 		this.name = name;

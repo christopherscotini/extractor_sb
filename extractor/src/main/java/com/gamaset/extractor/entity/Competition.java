@@ -1,11 +1,11 @@
-package com.gamaset.extractor.exceltosql.dto;
+package com.gamaset.extractor.entity;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class CompetitionDTO {
+public class Competition {
 	
 	public static final int ID_COLUMN = 0;
 	public static final int NAME_COLUMN = 1;
@@ -16,12 +16,12 @@ public class CompetitionDTO {
 	private Long id;
 	private String name;
 	private String link;
-	private FlagDTO flag;
-	private CountryDTO country;
+	private Flag flag;
+	private Country country;
 	
-	public CompetitionDTO() {	}
+	public Competition() {	}
 	
-	public CompetitionDTO(Long id, String name, String link, FlagDTO flag, CountryDTO country) {
+	public Competition(Long id, String name, String link, Flag flag, Country country) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -46,11 +46,11 @@ public class CompetitionDTO {
 		this.name = name;
 	}
 
-	public FlagDTO getFlag() {
+	public Flag getFlag() {
 		return flag;
 	}
 
-	public void setFlag(FlagDTO flag) {
+	public void setFlag(Flag flag) {
 		this.flag = flag;
 	}
 	public String getLink() {
@@ -61,11 +61,11 @@ public class CompetitionDTO {
 		this.link = link;
 	}
 
-	public CountryDTO getCountry() {
+	public Country getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryDTO country) {
+	public void setCountry(Country country) {
 		this.country = country;
 	}
 

@@ -1,33 +1,35 @@
-package com.gamaset.extractor.exceltosql.dto;
+package com.gamaset.extractor.entity;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class CountryDTO {
-	
+public class Team {
+
 	public static final int ID_COLUMN = 0;
 	public static final int NAME_COLUMN = 1;
-	
+	public static final int COUNTRY_ID_COLUMN = 2;
+
 	
 	private Long id;
 	private String name;
+	private Country country;
 	
-	public CountryDTO() {	}
-
+	public Team() {	}
 	
 	/**
 	 * @param id
 	 * @param name
+	 * @param competition
 	 */
-	public CountryDTO(Long id, String name) {
-		super();
+	public Team(Long id, String name, Country country) {
 		this.id = id;
 		this.name = name;
+		this.country = country;
 	}
 
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -43,7 +45,15 @@ public class CountryDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
